@@ -35,7 +35,7 @@ function get_python_binary()
             msg = msg.."'python' is not version 3; "
         end
     end
-    
+
     -- try: python3
     python_version = mp.command_native({
         name = "subprocess",
@@ -73,7 +73,7 @@ function launch_imdb()
                 args = {
                     python_binary,
                     mp.get_script_directory().."/open-imdb-page.py",
-                    mp.get_property("filename")
+                    mp.get_property("path")
                 }
             },
             callback
